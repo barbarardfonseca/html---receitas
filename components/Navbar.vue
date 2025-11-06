@@ -51,8 +51,13 @@
           >
             <div class="py-1" role="none">
               <NuxtLink to="/recipe" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Todas as Receitas</NuxtLink>
-              <NuxtLink to="/nova-receita" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Salvar uma Receita</NuxtLink>
               <NuxtLink to="/favoritos" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Favoritos</NuxtLink>
+
+              <!-- Links Condicionais -->
+              <template v-if="user">
+                <NuxtLink to="/new-recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" tabindex="-1" @click="closeMenus">Nova Receita</NuxtLink>
+                <NuxtLink to="/" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" @click="onLogout">Sair</NuxtLink>
+              </template>
             </div>
           </div>
         </div>
@@ -60,16 +65,22 @@
         <!-- Menu para telas grandes (hidden lg:flex) -->
         <div class="hidden lg:flex lg:items-center lg:space-x-4 ml-3">
           <NuxtLink to="/recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Todas as Receitas</NuxtLink>
-          <NuxtLink to="/nova-receita" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Salvar uma Receita</NuxtLink>
           <NuxtLink to="/favoritos" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Favoritos</NuxtLink>
+
+          <!-- Links Condicionais -->
+          <template v-if="user">
+            <NuxtLink to="/new-recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Nova Receita</NuxtLink>
+            <NuxtLink to="/" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" @click="onLogout">Sair</NuxtLink>
+          </template>
         </div>
       </div>
     </div>
   </nav>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+const user = useNuxtApp().$user;
+const onLogout = useNuxtApp().$onLogout;
 
 const isMobileMenuOpen = ref(false);
 const isDropdownOpen = ref(false);
@@ -86,4 +97,5 @@ const closeMenus = () => {
   isMobileMenuOpen.value = false;
   isDropdownOpen.value = false;
 };
+
 </script>
