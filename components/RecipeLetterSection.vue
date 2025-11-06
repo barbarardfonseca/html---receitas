@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import RecipeItemCard from '~/components/RecipeItemCard.vue'; // Importar se não for global/auto-importado
+import RecipeItemCard from "~/components/RecipeItemCard.vue"; // Importar se não for global/auto-importado
 
 defineProps({
   letter: String,
