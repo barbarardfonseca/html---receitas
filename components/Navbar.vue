@@ -50,8 +50,8 @@
             aria-labelledby="dropdown-button"
           >
             <div class="py-1" role="none">
-              <NuxtLink to="/recipe" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Todas as Receitas</NuxtLink>
-              <NuxtLink to="/favoritos" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Favoritos</NuxtLink>
+              <!-- <NuxtLink to="/recipe" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Todas as Receitas</NuxtLink>
+              <NuxtLink to="/favoritos" class="text-purple-800 hover:text-purple-700 block px-4 py-2 text-sm no-underline" role="menuitem" tabindex="-1" @click="closeMenus">Favoritos</NuxtLink> -->
 
               <!-- Links Condicionais -->
               <template v-if="user">
@@ -65,7 +65,7 @@
         <!-- Menu para telas grandes (hidden lg:flex) -->
         <div class="hidden lg:flex lg:items-center lg:space-x-4 ml-3">
           <NuxtLink to="/recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Todas as Receitas</NuxtLink>
-          <NuxtLink to="/favoritos" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Favoritos</NuxtLink>
+          <!-- <NuxtLink to="/favoritos" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Favoritos</NuxtLink> -->
 
           <!-- Links Condicionais -->
           <template v-if="user">
