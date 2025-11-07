@@ -1,8 +1,8 @@
 @import "tailwindcss";/* assets/css/fonts.css (ou seu arquivo CSS global) */
 @font-face {
   font-family: 'Brush Script MT'; /* O mesmo nome que você usou no tailwind.config.js */
-  src: url('~/assets/fonts/BrushScriptStd.otf') format('opentype'), /* Ajuste o nome do arquivo se necessário */
-       url('~/assets/fonts/BRUSHSCI.ttf') format('truetype'); /* Ajuste o nome do arquivo se necessário */
+  src: url('../fonts/BrushScriptStd.otf') format('opentype'), /* Ajuste o nome do arquivo se necessário */
+       url('../fonts/BRUSHSCI.ttf') format('truetype'); /* Ajuste o nome do arquivo se necessário */
   font-weight: normal; /* Ou o peso apropriado da fonte */
   font-style: normal;  /* Ou o estilo apropriado da fonte */
   font-display: swap;  /* Melhora a experiência de carregamento da fonte */
