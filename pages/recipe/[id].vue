@@ -5,10 +5,15 @@
     <div class="recipe-image">
       <img :src="recipe?.imageUrl" alt="Bolo de Chocolate">
     </div>
+    <div
+      v-if="recipe?.description"
+      class="recipe-description prose max-w-none text-center my-6" v-html="recipe?.description">
+    </div>
     <div class="recipe-info">
       <p><strong>Tempo de Preparo:</strong> {{ recipe?.cookingTime ? recipe?.cookingTime : "-" }}</p>
       <p><strong>Porção:</strong> {{recipe?.servings}}</p>
-    </div>
+    </div>  
+    
     <div class="recipe-content">
       <div class="ingredients">
         <h2>Ingredientes</h2>
