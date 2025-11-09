@@ -55,7 +55,7 @@
 
               <!-- Links Condicionais -->
               <template v-if="user">
-                <NuxtLink to="/new-recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" tabindex="-1" @click="closeMenus">Nova Receita</NuxtLink>
+                <NuxtLink to="/edit-recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" tabindex="-1" @click="closeMenus">Nova Receita</NuxtLink>
                 <NuxtLink to="/" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" @click="onLogout">Sair</NuxtLink>
               </template>
             </div>
@@ -69,7 +69,7 @@
 
           <!-- Links Condicionais -->
           <template v-if="user">
-            <NuxtLink to="/new-recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Nova Receita</NuxtLink>
+            <NuxtLink to="/edit-recipe" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline">Nova Receita</NuxtLink>
             <NuxtLink to="/" class="text-purple-800 hover:text-purple-700 px-3 py-2 text-sm no-underline" @click="onLogout">Sair</NuxtLink>
           </template>
         </div>
