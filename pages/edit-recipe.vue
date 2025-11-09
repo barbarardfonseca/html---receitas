@@ -35,6 +35,33 @@
           />
         </div>
 
+        <!-- Cooking Time and Servings -->
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+          <!-- Cooking Time -->
+          <div class="mb-4">
+            <label for="recipe-cooking-time" class="block text-gray-700 text-sm font-bold mb-2">Tempo de Preparo:</label>
+            <input
+              id="recipe-cooking-time"
+              v-model="recipe.cookingTime"
+              type="text"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-purple-800"
+              placeholder="Ex: 45 minutos"
+            >
+          </div>
+
+          <!-- Servings -->
+          <div class="mb-4">
+            <label for="recipe-servings" class="block text-gray-700 text-sm font-bold mb-2">Porções:</label>
+            <input
+              id="recipe-servings"
+              v-model="recipe.servings"
+              type="text"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-purple-800"
+              placeholder="Ex: 8 porções"
+            >
+          </div>
+        </div>
+
         <!-- Ingredients -->
         <div class="mb-4">
           <label for="recipe-ingredients" class="block text-gray-700 text-sm font-bold mb-2">Ingredientes:</label>
